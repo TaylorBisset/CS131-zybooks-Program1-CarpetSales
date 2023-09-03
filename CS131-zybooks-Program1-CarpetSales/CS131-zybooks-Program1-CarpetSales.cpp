@@ -1,8 +1,71 @@
 #include <iostream>
+#include <iomanip>
+using namespace std;
 
 int main()
 {
-    std::cout << "Hello World!\n";
+	// Order #1
+
+	int roomW;
+	int roomL;
+	double costPerSqFt;
+	cin >> costPerSqFt >> roomW >> roomL;
+
+	int roomArea = roomW * roomL;
+	double carpetCost = costPerSqFt * 1.2 * roomArea;
+	double laborCost = 0.75 * roomArea;
+	double tax = (carpetCost + laborCost) * 0.07;
+	double orderCost1 = carpetCost + laborCost + tax;
+	cout << fixed << setprecision(2);
+
+	cout << "Order #1\n";
+	cout << "Room: " << roomArea << " sq ft\n";
+	cout << "Carpet: $" << carpetCost << endl;
+	cout << "Labor: $" << laborCost << endl;
+	cout << "Tax: $" << tax << endl;
+	cout << "Cost: $" << orderCost1 << endl << endl;
+
+	// Order #2
+
+	cin >> costPerSqFt >> roomW >> roomL;
+
+	roomArea = roomW * roomL;
+	carpetCost = costPerSqFt * 1.2 * roomArea;
+	laborCost = 0.75 * roomArea;
+	tax = (carpetCost + laborCost) * 0.07;
+	double orderCost2 = carpetCost + laborCost + tax;
+	cout << fixed << setprecision(2);
+
+	cout << "Order #2\n";
+	cout << "Room: " << roomArea << " sq ft\n";
+	cout << "Carpet: $" << carpetCost << endl;
+	cout << "Labor: $" << laborCost << endl;
+	cout << "Tax: $" << tax << endl;
+	cout << "Cost: $" << orderCost2 << endl << endl;
+
+	// Order #3
+
+	cin >> costPerSqFt >> roomW >> roomL;
+
+	roomArea = roomW * roomL;
+	carpetCost = costPerSqFt * 1.2 * roomArea;
+	laborCost = 0.75 * roomArea;
+	tax = (carpetCost + laborCost) * 0.07;
+	double orderCost3 = carpetCost + laborCost + tax;
+	cout << fixed << setprecision(2);
+
+	cout << "Order #3\n";
+	cout << "Room: " << roomArea << " sq ft\n";
+	cout << "Carpet: $" << carpetCost << endl;
+	cout << "Labor: $" << laborCost << endl;
+	cout << "Tax: $" << tax << endl;
+	cout << "Cost: $" << orderCost3 << endl << endl;
+
+	// Total Cost of all Orders
+
+	cout << "Total Sales: $" << orderCost1 + orderCost2 + orderCost3 << endl;
+
+	return 0;
 }
 
 /*
